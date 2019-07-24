@@ -8,7 +8,7 @@ Generally, the installation steps should be:
 
 
 ```
-git clone .......
+git clone https://github.com/kukuu/GraphQL-API-Microservices-Gateway.git
 yarn install
 yarn run start
 ````
