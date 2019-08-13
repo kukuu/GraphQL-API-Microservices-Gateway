@@ -2,6 +2,8 @@
 
 GraphQL allows you to evolve your API naturally without versioning, it provides workable documentation, it avoids the problems of over, and under-fetching, and it offers a convenient way to aggregate data from multiple sources with a single request.
 
+Unlike REST applications, GraphQL implementations rely on a single endpoint. All GraphQL requests post data (always post, never get) to that one endpoint with the query that describes which resources and fields are being requested.
+
 This code contains an example of an [API Gateway](http://microservices.io/patterns/apigateway.html) written in NodeJS.  It was written to demonstrate how to combine both a [GraphQL](http://graphql.org/) API with traditional [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) endpoints.
 
 ## Installation
