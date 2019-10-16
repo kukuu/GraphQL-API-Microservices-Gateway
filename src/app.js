@@ -17,5 +17,5 @@ const query = new GraphQLObjectType({
 });
 
 export default new GraphQLSchema({
-    query,
+    query
 });
