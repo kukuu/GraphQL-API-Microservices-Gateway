@@ -13,6 +13,7 @@ const query = (q, vars) => {
 
 // Transform response to JSON API format (if desired)
 const transform = (result) => {
+    // Cache transformation to JSON Object
     const quote = result.data.quote;
 
     return {
@@ -22,7 +23,8 @@ const transform = (result) => {
             attributes: {
                 quote: quote.quote,
                 author: quote.author,
-                date: quote.date
+                date: quote.date,
+                length: quote.length
             }
         }
     }
@@ -31,7 +33,7 @@ const transform = (result) => {
 // REST request to get a quote
 router.get('/', (req, res) => {
     // Convert the request into a GraphQL query string
-    query("query{quote{id, quote, author, date}}")
+    query("query{quote{id, quote, author, date,length}}")
         .then(result => {
             const transformed = transform(result)
             res.send(transformed)
